@@ -5,7 +5,6 @@ import { useSearchParams } from 'react-router-dom';
 const Search = ({ handleSearchChange }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchValue, setSearchValue] = useState("");
-  console.log('search');
   useEffect(() => {
     const searchText = searchParams.get("search") ?? "";
     setSearchValue(searchText);

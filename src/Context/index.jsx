@@ -36,10 +36,8 @@ export const ShoppingCartProvider = ({ children }) => {
       try {
         const response = await axios.get('https://api.escuelajs.co/api/v1/products');
         setItems(response.data);
-        console.log(response.data);
         setLoadingItems(false);
       } catch (error) {
-        console.error(error);
         setLoadingItems(false);
         setItems(null);
       }
